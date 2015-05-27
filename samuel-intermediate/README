@@ -1,30 +1,46 @@
-Level 1
+Level 3
 
-Silence. The room feels large, but empty. Luckily you have a map of this tower to help find the stairs.
+You feel slime on all sides, you're surrounded!
 
-Tip: Use `warrior.directionOfStairs()` to determine which direction stairs are located. Pass this to `warrior.walk()` to walk in that direction.
+Tip: Call `warrior.bind(direction)` to bind an enemy to keep him from attacking. Bound enemies look like captives.
 
 
- ------
-|      |
-|@     |
-|      |
-|  >   |
- ------
+ ---
+|>s |
+|s@s|
+| C |
+ ---
 
 
   > = Stairs
   @ = Samuel (20 HP)
+  s = Sludge (12 HP)
+  C = Captive (1 HP)
 
 
 Warrior Abilities:
 
   Actions:
   
+    warrior.rescue()
+      Rescue a captive from his chains (earning 20 points) in given direction (forward by default).
+  
+    warrior.bind()
+      Binds a unit in given direction to keep him from moving (forward by default).
+  
+    warrior.attack()
+      Attacks a unit in given direction (forward by default).
+  
+    warrior.rest()
+      Gain 10% of max health back, but do nothing more.
+  
     warrior.walk()
       Move in the given direction (forward by default).
   
   Senses:
+  
+    warrior.health()
+      Returns an integer representing your health.
   
     warrior.feel()
       Returns a Space for the given direction (forward by default).
